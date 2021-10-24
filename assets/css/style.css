@@ -96,6 +96,11 @@ form .name-details .field:last-child {
     transform: translateY(-50%);
     cursor: pointer;
 }
+.form form .field i.active::before {
+    content: "\f070";
+    color: #333;
+
+}
 .form .link {
     text-align: center;
     margin: 10px 0;
