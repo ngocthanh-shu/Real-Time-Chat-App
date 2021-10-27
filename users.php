@@ -24,7 +24,7 @@
                <a href="#" class="logout">Logout</a>
            </header>
            <div class="search">
-               <span class="text">Select an user to star chat</span>
+               <span class="text">Select an user to start chat</span>
                <input type="text" placeholder="Enter name to search">
                <button><i class="fas fa-search"></i></button>
            </div>
@@ -62,6 +62,7 @@
            </div>
         </section>
     </div>
+    <script src="/Real-Time-Chat-App/assets/js/user.js"></script>
 </body>
 
 </html>
