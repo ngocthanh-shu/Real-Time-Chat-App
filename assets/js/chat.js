@@ -15,6 +15,7 @@ sendBtn.addEventListener('click', () => {
         if(xhr.readyState === XMLHttpRequest.DONE){
             if(xhr.status === 200){
                 inputField.value = "";
+                chatBox.scrollTop = chatBox.scrollHeight;
             }
         }
     }
@@ -22,6 +23,20 @@ sendBtn.addEventListener('click', () => {
     let formData = new FormData(form);
     xhr.send(formData);
 });
+
+// chatBox.addEventListener('onmouseenter',() => {
+//     chatBox.classList.add("active");
+// });
+// chatBox.addEventListener('onmouseleave',() => {
+//     chatBox.classList.remove("active");
+// });
+
+chatBox.onmouseenter = () => {
+    chatBox.classList.add("active");
+}
+chatBox.onmouseleave = () => {
+    chatBox.classList.remove("active");
+}
 
 setInterval(() => {
     //Ajax
@@ -32,6 +47,9 @@ setInterval(() => {
             if (xhr.status === 200) {
                 let data = xhr.response;
                 chatBox.innerHTML = data;
+                if(!chatBox.classList.contains("active")){
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                }    
             }
         }
     }
